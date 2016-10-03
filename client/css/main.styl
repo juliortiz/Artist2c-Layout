@@ -1,5 +1,234 @@
+// imports
 @import '_normalize'
+@import '_component'
+
+// Fuente log
+@font-face {
+    font-family: MRF-Blooming;
+    src: url('../fonts/MRF-Blooming.ttf');
+}
+
+//general
+.wrap
+    max-width 65em
+    margin: 0 auto
+.t-center
+    text-align: center
+
+.great
+    background-image: url("../img/foto-principal.jpg")
+    height: 100vh
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    background-attachment: fixed
+    overflow: hidden
+    position: relative
+    .hand
+        figure
+            bottom: 0
+            position absolute
+            max-width: 15em
+            margin-left: auto
+            margin-right: auto
+            left: 0
+            right: 0
+            img
+                display: block
 
 body
-  color yellow
-  font-family 'Roboto', sans-serif
+    font-family 'Dosis', sans-serif
+    padding-bottom: 3em
+h1
+    font-size: .7em
+    background-color: _green-bg
+    display: table
+    padding-top: 1em
+    margin: 0 auto
+    border-right: 1px solid _white
+    border-bottom: 2px solid _white
+    border-left: 1px solid _white
+    border-radius: 0 0 10px 10px
+
+.slogan
+    font-family: 'Dosis', sans-serif
+    color: _white
+    font-size: 2em
+    margin: 0 auto
+    padding: 0.5em 0.5em 2em .5em
+    text-align: center
+    background: rgba(50, 157, 139,1)   
+    background: linear-gradient(to bottom, rgba(50, 157, 139,1) 0%, rgba(255,255,255,0) 80%)
+.nav
+    background-color _white
+    border-top: 2px solid _green-bg
+    position: fixed
+    bottom: 0
+    width: 100%
+    z-index: 100
+    &__container
+        margin-left auto
+        margin-right auto
+    &__menu
+        display flex
+        align-items center
+        justify-content space-around
+        a
+            text-transform uppercase
+            color _green-bg
+            padding: .3em .5em
+            text-align: center
+            &:hover
+                background-color: _green-bg
+                color: _white
+                transition: all 0.2s ease-in-out
+        &__icon
+            font-size: 1.5em
+            margin-bottom: .1em
+            line-height: .5em
+        &__text
+            font-size: .8em
+
+.section
+    padding: 6em 1em
+    display: flex
+    align-items: center
+
+.why
+    &__details
+        display: flex
+        flex-wrap: wrap
+        align-items center
+        justify-content space-around
+        .details__item
+            margin: 1em
+            box-sizing: border-box
+            text-align: center
+
+.feature
+    background-image: url("../img/fiesta2-filtro.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    background-attachment: fixed
+    &__details
+        &__item
+            padding: 1em 0 
+            ul
+                li
+                    display: flex
+                    align-items center
+                    color: _white
+                    margin-bottom: 1em
+                    i
+                        margin-right: 1em
+            figure
+                border-radius: 5px
+                overflow: hidden
+                border: 1px solid _white
+                img
+                    display: block
+.contact-us
+    .contact_form
+        display: table 
+        border-bottom: 3px solid _green-bg
+        margin: 0 auto
+        li
+            margin: 1em 0
+            input
+                height: 30px
+                min-width: 17em
+                border: 0
+                box-shadow: 6px 0 _green-bg inset,
+                            0 1px #e6e6e6 inset,
+                            0 -1px #e6e6e6 inset,
+                            -1px 0px #e6e6e6 inset
+                vertical-align: middle
+                padding-left: 0.8em
+            textarea
+                display: table
+                min-width: 17em
+                border: 0
+                box-shadow: 6px 0 _green-bg inset,
+                            0 1px #e6e6e6 inset,
+                            0 -1px #e6e6e6 inset,
+                            -1px 0px #e6e6e6 inset
+                vertical-align: middle
+                padding-left: 0.8em
+
+.submit
+    background-color: _green-bg
+    border: 1px solid #509111
+    border-bottom: 1px solid #5b992b
+    border-radius: 3px
+    box-shadow: inset 0 1px 0 0 #9fd574
+    color: white
+    font-weight: bold
+    padding: 6px 20px
+    text-align: center
+    text-shadow: 0 -1px 0 #396715
+    margin: 0 auto
+    &:hover
+        box-shadow: 0 4px 12px -7px #000
+        transition: all 0.5s ease-in-out
+
+.footer
+    background-color: _green-bg
+    color: _white
+    padding: 1.5em 0
+    text-align: center
+
+@media screen and (min-width 33em)
+        
+    .slogan
+        padding: .5em
+        font-size: 2em
+
+    .details__item
+        max-width: 25%
+
+    .nav__menu
+        a
+            display: flex
+            align-items: center
+            padding: .6em
+        &__icon
+            margin-right: .5em
+        &__text
+            font-size: 1em
+            font-weight: bold
+
+@media screen and (min-width 48em)
+        
+    body
+        padding-bottom: 0
+    
+    h1
+        padding-top: 5.5em
+    
+    .slogan
+        padding: .5em
+        margin-top: 1em
+        font-size: 3em
+    .great
+        .hand
+            figure
+                max-width: 15em
+
+    .nav
+        top: 0
+        display: table
+        border-bottom: 2px solid _green-bg
+        border-top: 0
+    
+    .feature__details
+        display: flex
+        &__item
+            padding: 0 1em
+            box-sizing: border-box
+            max-width: 50%
+
+@media screen and (min-width 54em)
+    
+    .slogan
+        padding: .5em .5em 2em 
